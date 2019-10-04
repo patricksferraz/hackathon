@@ -1,0 +1,29 @@
+# -*- coding: utf8 -*-
+
+"""
+Um Posto de combustíveis deseja determinar qual de seus produtos tem a
+preferência de seus clientes. Escreva um algoritmo para ler o tipo de
+combustível abastecido (codificado da seguinte forma:
+1.Álcool
+2.Gasolina
+3.Diesel
+4.Fim).
+Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser
+solicitado um novo código (até que seja válido). O programa será encerrado
+quando o código informado for o número 4.
+"""
+
+fuel = {1: 0, 2: 0, 3: 0}
+x = 5
+
+while x != 4:
+    if fuel.get(x) is not None:
+        fuel[x] += 1
+    x = int(input())
+
+print(
+    "MUITO OBRIGADO\n"
+    "Alcool: {}\n"
+    "Gasolina: {}\n"
+    "Diesel: {}".format(fuel[1], fuel[2], fuel[3])
+)
