@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<IODEF-Document version="1.00" lang="en"
+	xmlns="urn:ietf:params:xml:ns:iodef-1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:ietf:params:xml:schema:iodef-1.0">
+	<Incident purpose="reporting">
+		<IncidentID name="ENSI-CSIRT">2019090102</IncidentID>
+		<ReportTime>2019-09-09T17:05:18-03:00</ReportTime>
+		<Assessment>
+			<Impact type="file" completion="succeeded" />
+		</Assessment>
+		<Contact role="creator" type="organization">
+			<ContactName>ENSI CSIRT</ContactName>
+			<Email>ensi@pop-ba.rnp.br</Email>
+		</Contact>
+		<History />
+		<AdditionalData meaning="service">JSSensor</AdditionalData>
+		<AdditionalData meaning="service_provider_email">ensi@pop-ba.rnp.br</AdditionalData>
+		<AdditionalData meaning="subject">Site Desfigurado</AdditionalData>
+		<AdditionalData meaning="url">http://blog.ensi.pop-ba.rnp.br/coinhive.js</AdditionalData>
+		<EventData>
+			<Flow>
+				<System category="source">
+					<Node>
+						<Address category="ipv4-addr">192.168.100.100</Address>
+					</Node>
+				</System>
+			</Flow>
+		</EventData>
+	</Incident>
+</IODEF-Document>
