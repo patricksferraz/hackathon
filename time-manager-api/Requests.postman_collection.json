@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "7fe6a383-650c-49b8-9038-85da392cfe51",
+		"name": "Requests",
+		"description": "Requests for the time manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"cond\": \"25/03/2019\",\n\t\t\"intervals\" : [\n\t        {\"start\": \"17:30\", \"end\": \"20:00\"},\n\t        {\"start\": \"20:10\", \"end\": \"23:30\"}\n\t    ]\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:3000/times",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"times"
+					]
+				},
+				"description": "register a new rule"
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/times",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"times"
+					]
+				},
+				"description": "returns all rules"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"cond\": \"sun\",\n\t\t\"keys\" : [0, 1]\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:3000/times",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"times"
+					]
+				},
+				"description": "Request to delete some rule"
+			},
+			"response": []
+		},
+		{
+			"name": "getTimes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/times/25-01-2018/29-01-2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"times",
+						"25-01-2018",
+						"29-01-2018"
+					]
+				},
+				"description": "Return all times defined in the range"
+			},
+			"response": []
+		}
+	]
+}
