@@ -1,0 +1,25 @@
+{
+  "name": "time-manager",
+  "version": "1.0.0",
+  "description": "Project developed for the selective process of the company Cubos, this API performs time management in a clinic",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patricksferraz/time-manager.git"
+  },
+  "keywords": [],
+  "author": "Patrick Silva Ferraz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patricksferraz/time-manager/issues"
+  },
+  "homepage": "https://github.com/patricksferraz/time-manager#readme"
+}
